@@ -1,6 +1,10 @@
 <Project>
-  <PropertyGroup>
-    <TargetFrameworks>net462;net472;netcoreapp3.1;net5.0-windows;net6.0-windows</TargetFrameworks>
+	<Import Project="Directory.NuGet.props" />
+	<PropertyGroup>
+		<VersionPrefix>$(CoreLibraryVersion)</VersionPrefix>
+		<VersionSuffix Condition="'$(Configuration)' != 'Release'">0-at20230701053312</VersionSuffix>
+		<VersionSuffix Condition="'$(Configuration)' == 'Release'">0</VersionSuffix>
+    <TargetFrameworks>net45;net462;net472;netcoreapp3.1;net5.0-windows;net6.0-windows</TargetFrameworks>
     <LangVersion>latest</LangVersion>
     <UseWindowsForms>true</UseWindowsForms>
 	  <UseWPF>true</UseWPF>
@@ -16,7 +20,6 @@
     <RepositoryUrl>https://github.com/hardcodet/wpf-notifyicon</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageProjectUrl>https://github.com/hardcodet/wpf-notifyicon</PackageProjectUrl>
-    <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <Description>This is an implementation of a NotifyIcon (aka system tray icon or taskbar icon) for the WPF platform. It does not just rely on the Windows Forms NotifyIcon component, but is a purely independent control which leverages several features of the WPF framework in order to display rich tooltips, popups, context menus, and balloon messages. It can be used directly in code or embedded in any XAML file.
 
