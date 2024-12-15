@@ -16,7 +16,9 @@
     <AutoMapperVersion>13.0.1</AutoMapperVersion>
     <BackgroundWorkerLibraryVersion>2.3.0</BackgroundWorkerLibraryVersion>
     <BarcodeVersion>1.2.0</BarcodeVersion>
+    <BouncyCastleVersion>2.6.0</BouncyCastleVersion>
     <BrutalDevStrongNameSignerVersion>3.2.1</BrutalDevStrongNameSignerVersion>
+    <BuildAllPackagesVersion>2.1.0</BuildAllPackagesVersion>
     <CefSharpLibraryVersion>2.4.0</CefSharpLibraryVersion>
     <CertificateLibraryVersion>1.0.0</CertificateLibraryVersion>
     <CodeDomExtVersion>2.2.0</CodeDomExtVersion>
@@ -70,7 +72,7 @@
     <HtmlCleanerVersion>1.4.0</HtmlCleanerVersion>
     <IdentityApplicationVersion>2.2.0</IdentityApplicationVersion>
     <IdentityModelVersion>7.0.0</IdentityModelVersion>
-    <IdentityServer4AccessTokenValidationVersion>4.0.0</IdentityServer4AccessTokenValidationVersion>
+    <IdentityServer4AccessTokenValidationVersion>4.1.0</IdentityServer4AccessTokenValidationVersion>
     <IdentityServer4StorageVersion>4.0.0</IdentityServer4StorageVersion>
     <IdentityServer4Version>4.1.0</IdentityServer4Version>
     <ImmatricolazioniLibraries>1.0.0</ImmatricolazioniLibraries>
@@ -81,7 +83,8 @@
     <InstallerLibraryVersion>1.8.0</InstallerLibraryVersion>
     <IoCLibraryVersion>1.8.0</IoCLibraryVersion>
     <iTextCoreVersion>1.3.0</iTextCoreVersion>
-    <iTextSharpPdfaVersion>6.0.0</iTextSharpPdfaVersion>
+    <iTextSharpPdfaVersion>6.1.0</iTextSharpPdfaVersion>
+    <itextsharpVersion>5.5.13</itextsharpVersion>
     <KillChromeDriverVersion>2.2.0</KillChromeDriverVersion>
     <LastNetVersion>8.0.11</LastNetVersion>
     <LibEntityFrameworkVersion>1.5.0</LibEntityFrameworkVersion>
@@ -112,9 +115,11 @@
     <Net4xEntityFrameworkLibVersion>1.2.0</Net4xEntityFrameworkLibVersion>
     <Net4xEntityFrameworkVersion>6.4.4</Net4xEntityFrameworkVersion>
     <Net4xExtensionsVersion>2.5.0</Net4xExtensionsVersion>
+    <Net4xInternetExplorerVersion>1.5.0</Net4xInternetExplorerVersion>
     <Net4xIoCompressionVersion>1.0.0</Net4xIoCompressionVersion>
     <Net4xIOCompressionVersion>1.0.0</Net4xIOCompressionVersion>
-    <Net4xiTextSharpVersion>5.5.14</Net4xiTextSharpVersion>
+    <Net4xiTextSharpPdfToPdfAVersion>6.0.1</Net4xiTextSharpPdfToPdfAVersion>
+    <Net4xiTextSharpVersion>6.1.0</Net4xiTextSharpVersion>
     <Net4xiTextVersion>1.1.0</Net4xiTextVersion>
     <Net4xMSHTMLVersion>1.2.0</Net4xMSHTMLVersion>
     <Net4xMsTestsVersion>1.5.0</Net4xMsTestsVersion>
@@ -129,6 +134,7 @@
     <NewtonsoftJsonVersion>13.0.3</NewtonsoftJsonVersion>
     <NotepadSharpVersion>1.5.0</NotepadSharpVersion>
     <NotifyIconWpfVersion>2.3.0</NotifyIconWpfVersion>
+    <NugetOptimizerVersion>1.0.0</NugetOptimizerVersion>
     <NuGetUtilityPocVersion>2.0.12</NuGetUtilityPocVersion>
     <NuGetUtilityVersion>1.0.0</NuGetUtilityVersion>
     <NumberConverterLibVersion>1.2.0</NumberConverterLibVersion>
@@ -148,8 +154,8 @@
     <PdfOcrVersion>1.3.0</PdfOcrVersion>
     <PdfRecognizerLibraryVersion>1.3.0</PdfRecognizerLibraryVersion>
     <PdfRepresentationVersion>1.3.0</PdfRepresentationVersion>
-    <PdfToPdfALibraryVersion>1.81.0</PdfToPdfALibraryVersion>
-    <PdfToPdfAVersion>1.81.0</PdfToPdfAVersion>
+    <PdfToPdfALibraryVersion>1.90.0</PdfToPdfALibraryVersion>
+    <PdfToPdfAVersion>1.90.0</PdfToPdfAVersion>
     <PdfViewerLibraryVersion>2.2.0</PdfViewerLibraryVersion>
     <PinnedLibraryVersion>1.3.0</PinnedLibraryVersion>
     <ProjectsFormatLibraryVersion>1.9.0</ProjectsFormatLibraryVersion>
@@ -172,6 +178,7 @@
     <SqlParametersToVariableDefinitionsVersion>1.0.0</SqlParametersToVariableDefinitionsVersion>
     <StarbCommonVersion>2.0.0</StarbCommonVersion>
     <StarbNet8Version>30.0.0</StarbNet8Version>
+    <StarbookAppVersion>1.0.0</StarbookAppVersion>
     <StarbVersion>30.0.0</StarbVersion>
     <SystemCodeDom5Version>5.0.0</SystemCodeDom5Version>
     <SystemCodeDom6Version>6.0.0</SystemCodeDom6Version>
@@ -191,7 +198,9 @@
     <SystemSecurityPermissions9Version>9.0.0</SystemSecurityPermissions9Version>
     <SystemSecurityPermissionsVersion>7.0.0</SystemSecurityPermissionsVersion>
     <SystemSecurityPrincipalWindowsVersion>5.0.0</SystemSecurityPrincipalWindowsVersion>
+    <SystemTextEncodingVersion>4.3.0</SystemTextEncodingVersion>
     <TaskSchedulerLibraryVersion>1.3.0</TaskSchedulerLibraryVersion>
+    <TestAppVersion>1.2.0</TestAppVersion>
     <TextControlVersion>1.2.0</TextControlVersion>
     <TitaniumProxyLibraryVersion>1.72.0</TitaniumProxyLibraryVersion>
     <TitaniumWebProxyDocsVersion>2.1.0</TitaniumWebProxyDocsVersion>
