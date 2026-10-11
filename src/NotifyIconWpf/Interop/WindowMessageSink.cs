@@ -255,10 +255,11 @@ namespace Hardcodet.Wpf.TaskbarNotification.Interop
                      * GET_Y_LPARAM should be used to retrieve anchor Y-coordinate, this is defined as
                      *  ((int)(short)((WORD)((((ULONG_PTR)(wParam)) >> 16) & 0xffff)))
                      */
+                    // unchecked: coordinates are signed 16-bit words (negative on monitors left of/above the primary one)
                     ContextMenuReceived?.Invoke(new Point()
                     {
-                        X = (short)((nint)wParam & 0xFFFF),
-                        Y = (short)((nint)wParam >> 16 & 0xFFFF)
+                        X = unchecked((short)((nint)wParam & 0xFFFF)),
+                        Y = unchecked((short)((nint)wParam >> 16 & 0xFFFF))
                     });
                     break;
 

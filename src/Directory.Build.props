@@ -1,85 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
 <Project>
-	<Import Project="Directory.NuGet.props" />
-	<PropertyGroup>
-		<VersionPrefix>$(NotifyIconWpfVersion)</VersionPrefix>
-    <SolutionDir Condition="'$(SolutionDir)'==''">$(MSBuildThisFileDirectory)</SolutionDir>
-    <VersionSuffix Condition="'$(Configuration)' != 'Release'">0-at20230701053312</VersionSuffix>
-		<VersionSuffix Condition="'$(Configuration)' == 'Release'">0</VersionSuffix>
-    <TargetFrameworks>net45;net462;net472;netcoreapp3.1;net5.0-windows;net6.0-windows</TargetFrameworks>
-    <LangVersion>latest</LangVersion>
-    <UseWindowsForms>true</UseWindowsForms>
-	  <UseWPF>true</UseWPF>
-    <AppendTargetFrameworkToOutputPath>true</AppendTargetFrameworkToOutputPath>
-    <IsSampleProject>$(MSBuildProjectName.Contains('Sample'))</IsSampleProject>
-    <DebugSymbols>True</DebugSymbols>
-    <DebugType>embedded</DebugType>
-    
-    <Copyright>Copyright (c) 2009-2021 Philipp Sumi</Copyright>
-    <Company>hardcodet.net</Company>
-    <Authors>Philipp Sumi, Robin Krom, Jan Karger</Authors>
-    <PackageIcon>icon.png</PackageIcon>
-    <RepositoryUrl>https://github.com/hardcodet/wpf-notifyicon</RepositoryUrl>
-    <RepositoryType>git</RepositoryType>
-    <PackageProjectUrl>https://github.com/hardcodet/wpf-notifyicon</PackageProjectUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <Description>This is an implementation of a NotifyIcon (aka system tray icon or taskbar icon) for the WPF platform. It does not just rely on the Windows Forms NotifyIcon component, but is a purely independent control which leverages several features of the WPF framework in order to display rich tooltips, popups, context menus, and balloon messages. It can be used directly in code or embedded in any XAML file.
+    <Import Project="Directory.NuGet.props" />
+    <PropertyGroup>
+        <VersionPrefix>$(NotifyIconWpfVersion)</VersionPrefix>
+        <SolutionDir Condition="'$(SolutionDir)'==''">$(MSBuildThisFileDirectory)</SolutionDir>
+        <VersionSuffix>$([System.DateTime]::Now.ToString("yy"))$([System.DateTime]::Now.DayOfYear.ToString("000"))</VersionSuffix>
+        <LangVersion>latest</LangVersion>
+        <UseWindowsForms>true</UseWindowsForms>
+        <UseWPF>true</UseWPF>
+        <AppendTargetFrameworkToOutputPath>true</AppendTargetFrameworkToOutputPath>
+        <IsSampleProject>$(MSBuildProjectName.Contains('Sample'))</IsSampleProject>
+        <DebugSymbols>True</DebugSymbols>
+        <DebugType>embedded</DebugType>
+        <Copyright>Copyright (c) 2009-2021 Philipp Sumi</Copyright>
+        <Company>hardcodet.net</Company>
+        <Authors>Philipp Sumi, Robin Krom, Jan Karger</Authors>
+        <PackageIcon>icon.png</PackageIcon>
+        <RepositoryUrl>https://github.com/hardcodet/wpf-notifyicon</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageProjectUrl>https://github.com/hardcodet/wpf-notifyicon</PackageProjectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <Description>This is an implementation of a NotifyIcon (aka system tray icon or taskbar icon) for the WPF platform. It does not just rely on the Windows Forms NotifyIcon component, but is a purely independent control which leverages several features of the WPF framework in order to display rich tooltips, popups, context menus, and balloon messages. It can be used directly in code or embedded in any XAML file.
 
 Source code and extensive sample application available at http://www.hardcodet.net/projects/wpf-notifyicon</Description>
-    <Summary>NotifyIcon (aka system tray icon or taskbar icon) for the WPF platform.</Summary>
-    <tags>NotifyIcon WPF Tray Notify ToolTip Popup Balloon Toast</tags>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="$(TargetFramework.StartsWith('net4'))">
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
-    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Nerdbank.GitVersioning" Version="3.5.104">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
-    </PackageReference>
-  </ItemGroup>
-
-  <Choose>
-    <When Condition=" '$(IsSampleProject)' != 'true' ">
-      <PropertyGroup>
-        <GenerateDocumentationFile>true</GenerateDocumentationFile>
-        <IsPackable>true</IsPackable>
-        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-      </PropertyGroup>
-
-      <PropertyGroup>
-        <SignAssembly>true</SignAssembly>
-        <AssemblyOriginatorKeyFile>..\NotifyIconWpf.snk</AssemblyOriginatorKeyFile>
-        <DelaySign>false</DelaySign>
-        <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
-      </PropertyGroup>
-
-      <ItemGroup>
-        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All"/>
-        <None Include="$(SolutionDir)\icon.png" Pack="true" PackagePath="\"/>
-      </ItemGroup>
-
-      <!-- SourceLink -->
-      <PropertyGroup>
-        <!-- Optional: Declare that the Repository URL can be published to NuSpec -->
-        <PublishRepositoryUrl>true</PublishRepositoryUrl>
-        <!-- Optional: Embed source files that are not tracked by the source control manager to the PDB -->
-        <EmbedUntrackedSources>true</EmbedUntrackedSources>
-        <!-- https://github.com/dotnet/sourcelink/blob/master/docs/README.md#embedallsources -->
-        <EmbedAllSources>true</EmbedAllSources>
-      </PropertyGroup>
-    </When>
-  </Choose>
-
-  <ItemGroup>
-    <None Remove="**\*.png;**\*.jpg;**\*.ico" />
-    <Resource Include="**\*.png;**\*.jpg;**\*.ico" />
-    <None Include="..\..\LICENSE" Pack="true" PackagePath="" />
-  </ItemGroup>
-
+        <Summary>NotifyIcon (aka system tray icon or taskbar icon) for the WPF platform.</Summary>
+        <tags>NotifyIcon WPF Tray Notify ToolTip Popup Balloon Toast</tags>
+    </PropertyGroup>
+    <PropertyGroup Condition="$(TargetFramework.StartsWith('net4'))">
+        <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+        <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Nerdbank.GitVersioning" Version="3.5.104">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
+    <Choose>
+        <When Condition=" '$(IsSampleProject)' != 'true' ">
+            <PropertyGroup>
+                <GenerateDocumentationFile>true</GenerateDocumentationFile>
+                <IsPackable>true</IsPackable>
+                <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+            </PropertyGroup>
+            <PropertyGroup>
+                <SignAssembly>true</SignAssembly>
+                <AssemblyOriginatorKeyFile>..\NotifyIconWpf.snk</AssemblyOriginatorKeyFile>
+                <DelaySign>false</DelaySign>
+                <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
+            </PropertyGroup>
+            <ItemGroup>
+                <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
+                <None Include="$(SolutionDir)\icon.png" Pack="true" PackagePath="\" />
+            </ItemGroup>
+            <!-- SourceLink -->
+            <PropertyGroup>
+                <!-- Optional: Declare that the Repository URL can be published to NuSpec -->
+                <PublishRepositoryUrl>true</PublishRepositoryUrl>
+                <!-- Optional: Embed source files that are not tracked by the source control manager to the PDB -->
+                <EmbedUntrackedSources>true</EmbedUntrackedSources>
+                <!-- https://github.com/dotnet/sourcelink/blob/master/docs/README.md#embedallsources -->
+                <EmbedAllSources>true</EmbedAllSources>
+            </PropertyGroup>
+        </When>
+    </Choose>
+    <ItemGroup>
+        <None Remove="**\*.png;**\*.jpg;**\*.ico" />
+        <Resource Include="**\*.png;**\*.jpg;**\*.ico" />
+        <None Include="..\..\LICENSE" Pack="true" PackagePath="" />
+    </ItemGroup>
 </Project>
